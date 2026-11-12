@@ -175,7 +175,7 @@ def forecast(rows, task, params=None):
                 ) / dt_h * 10.0
                 pg10 = max(-1.0, min(1.0, pg10))
                 adj -= pg10 * p["pg_weight"]
-            r_adj = max(1.0, min(115.0, base + adj))
+        r_adj = max(1.0, min(115.0, base + adj))
 
         # Ageing out: the chart only lists games published in the last 28
         # days. If this game crosses that line inside the window, scale by
